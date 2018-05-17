@@ -5,7 +5,7 @@ var BECAUSE_OF_THEIR = ["because of their"];
 var EVIL_WEAPONS = ["murderous equity doctrine", "dangerous egalitarian utopia", "hatred of Objective Truth", "compelled speech", "group identity", "Maoist pronouns", "propaganda from Frozen", "radical collectivism", "lens of power for everything", "disdain for Being", "ideological bill C-16", "low serotonin levels and poor posture", "totalitarian ideology which I've been studying for decades"];
 var OMINOUS_CONCLUSION = ["and we can't even have a conversation about it!", "so just ask the Kulaks how that worked out.", "and no one is talking about it!", "as you can bloody well imagine!", "just like Nietzsche prophesized.", "so you should sign up for the Self Authoring Suite.", "so let me ask you this...", "and you can be damn sure about that!"];
 
-window.onload = function generate() {
+function generate() {
 	var phrase_container = document.getElementById("phrase");
 
 	var phrase = "";
@@ -30,6 +30,8 @@ window.onload = function generate() {
 	share_general.href = "http://twitter.com/share?text=" + phrase + "&url=http://gsajith.com/peterson-generator/";
 	share_peterson.href = "http://twitter.com/share?text=@JordanBPeterson " + phrase + "&url=null";
 };
+
+window.onload = generate;
 
 function generateTweetLink() {
 	return "http://twitter.com/share?text=Check out this article I found on http://gsajith.com/peterson-generator/&url=http://gsajith.com/peterson-generator/";
