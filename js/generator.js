@@ -21,14 +21,18 @@ function generate() {
 	phrase += " ";
 	phrase += OMINOUS_CONCLUSION[Math.floor(Math.random() * OMINOUS_CONCLUSION.length)];
 
-	phrase_container.innerText = phrase;
+	phrase_container.innerHTML = phrase;
 
 	// Set up share links
 	var share_general = document.getElementById("share-general");
 	var share_peterson = document.getElementById("share-peterson");
 
-	share_general.href = "http://twitter.com/share?text=" + phrase + "&url=http://gsajith.com/peterson-generator/";
-	share_peterson.href = "http://twitter.com/share?text=@JordanBPeterson " + phrase + "&url=null";
+	share_general.href = "http://twitter.com/share?text=" + stripTags(phrase) + "&url=http://gsajith.com/peterson-generator/";
+	share_peterson.href = "http://twitter.com/share?text=@JordanBPeterson " + stripTags(phrase) + "&url=null";
 };
+
+function stripTags(string) {
+	return string.replace(/<(?:.|\n)*?>/gm, '');
+}
 
 window.onload = generate;
