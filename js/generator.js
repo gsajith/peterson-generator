@@ -32,7 +32,3 @@ function generate() {
 };
 
 window.onload = generate;
-
-function generateTweetLink() {
-	return "http://twitter.com/share?text=Check out this article I found on http://gsajith.com/peterson-generator/&url=http://gsajith.com/peterson-generator/";
-}
