@@ -51,7 +51,8 @@ body {
 	display: inline-block;
 	background-color: rgba(255, 255, 255, .2);
 	color: white;
-	padding: .6em;
+	padding-top: .6em;
+	padding-bottom: .5em;
 	padding-left: 1em;
 	padding-right: 1em;
 	border-radius: 4px;
