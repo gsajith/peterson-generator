@@ -1,0 +1,57 @@
+body {
+	padding-top: 4em;
+	margin: auto;
+	text-align: center;
+	width: 80%;
+	background-color: #222222;
+}
+
+#header {
+	font-size:1em;
+	color: #cacaca;
+	font-family: sans-serif;
+	align-content: center;
+}
+
+#brain {
+	width: 1.5em;
+	height: 1.5em;
+	background: url(../images/brain.png) no-repeat center center;
+	background-size:contain;
+	display: inline-block;
+    zoom: 1;
+    *display:inline;
+    margin: .3em;
+    margin-bottom: -.4em;
+}
+
+#divider {
+	height: 1px;
+	width: 100%;
+	margin-top: .4em;
+	margin-bottom: 1em;
+	background-color: white;
+}
+
+#phrase {
+	font-size:1.5em;
+	color: white;
+}
+
+#share-box {
+	color: white;
+	font-weight: bold;
+}
+
+.share {
+	margin-bottom: .25em;
+}
+
+.share a{
+	color: #cacaca;
+	text-decoration: none;
+}
+
+.share:hover a{
+	color: white;
+}
