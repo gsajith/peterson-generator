@@ -38,6 +38,15 @@ body {
 	color: white;
 }
 
+#quotation-mark {
+	font-size: 1.6em;
+	color: #aaaaaa;
+	-webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
 #regenerate-button {
 	display: inline-block;
 	background-color: rgba(255, 255, 255, .2);
