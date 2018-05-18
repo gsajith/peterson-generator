@@ -89,3 +89,15 @@ function tweetPeterson() {
 tweetGeneral();
 setInterval(tweetGeneral, 34124); // General tweet every 50 minutes
 setInterval(tweetPeterson, getRandomHours(20, 30)); // Tweet at JBP once every 20-30 hours
+
+var express = require('express');
+var app = express();
+
+app.set('port', (process.env.PORT || 5000));
+
+app.get('/', function(request, response) {
+	var result = "App is running";
+	response.send(result);
+}).listen(app.get('port'), function() {
+    console.log('App is running, server is listening on port ', app.get('port'));
+});
