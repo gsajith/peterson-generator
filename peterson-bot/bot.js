@@ -134,7 +134,7 @@ function tweetLobster() {
     });
 }
 
-tweetGeneral();
+tweetLobster();
 setInterval(tweetGeneral, 3000000); // General tweet every 50 minutes
 setInterval(tweetLobster, getRandomHours(.42, 1)); // Tweet at a JBP follower once every 25-60 minutes
 setInterval(tweetPeterson, getRandomHours(20, 30)); // Tweet at JBP once every 20-30 hours
