@@ -1,6 +1,6 @@
 var twit = require('twit');
 /** 
- * Create your own config.js in this directory with consumer key, 
+ * Create your own .env in this directory with consumer key, 
  * consumer secret, access token, and access token secret
  * if you clone this file. 
  */
