@@ -87,7 +87,7 @@ function tweetPeterson() {
 }
 
 tweetGeneral();
-setInterval(tweetGeneral, 34124); // General tweet every 50 minutes
+setInterval(tweetGeneral, 300000); // General tweet every 50 minutes
 setInterval(tweetPeterson, getRandomHours(20, 30)); // Tweet at JBP once every 20-30 hours
 
 var express = require('express');
