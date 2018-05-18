@@ -1,5 +1,10 @@
 var twit = require('twit');
-var config = require('./config.js');
+/** 
+ * Create your own config.js in this directory with consumer key, 
+ * consumer secret, access token, and access token secret
+ * if you clone this file. 
+ */
+var config = require('./config.js'); 
 var Twitter = new twit(config);
 
 var VILLAINS = ["Postmodern Neomarxists", "Feminists (who secretly crave domination)", "Leftist academics", "Dangerous ideologues", "Derrida and Foucault", "Indoctrinated students", "Social justice types", "Radical trans activists", "Politically correct HR departments", "Actual Communists", "<i>The</i> left", "Millennials with a victimhood mentality", "Universities under siege by ideological agendas", "Sad women complaining about the patriarchy", "The modern acolytes of Karl Marx", "So-called tolerant progressives", "Marxist professors teaching <i>Das Kapital</i>", "Need I mention that leftists", "Spoon-fed radical students", "The postmodernists who hate truth", "The 'tolerant' brainwashed masses", "Businesses infiltrated by Postmodern Neomarxists", "Progressives drunk on empathy", "The self-proclaimed diversity advocates", "Entitled progressive children", "Critics of free speech on campus", "Those who slander me", "My enemies on the radical left", "Ideological parents with a leftist agenda", "It's still shocking that campus radicals", "Safe space warriors"];
@@ -53,6 +58,12 @@ function stripTags(string) {
 	return string.replace(/<(?:.|\n)*?>/gm, '');
 }
 
+function getRandomHours(startHours, endHours) {
+	var startMillis = startHours * 3600000;
+	var endMillis = endHours * 3600000;
+	return Math.floor(Math.random() * endMillis) + startMillis;
+}
+
 function tweetGeneral() {
 	var generatedPhrase = generate(false);
 	while (generatedPhrase == null) {
@@ -76,3 +87,5 @@ function tweetPeterson() {
 }
 
 tweetGeneral();
+setInterval(tweetGeneral, 3000000); // General tweet every 50 minutes
+setInterval(tweetPeterson, getRandomHours(20, 30)); // Tweet at JBP once every 20-30 hours
