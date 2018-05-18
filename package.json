@@ -1,0 +1,7 @@
+{
+    "name": "peterson-bot",
+    "version": "1.0.0",
+    "scripts": {
+        "postinstall": "npm install --prefix peterson-bot"
+    }
+}

@@ -4,7 +4,7 @@
   "description": "A bot that tweets generated Jordan B Peterson quotes",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node bot.js"
   },
   "repository": {
     "type": "git",
