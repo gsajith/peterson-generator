@@ -19,6 +19,7 @@
   "author": "Gautham Sajith",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^5.0.1",
     "twit": "^2.2.9"
   }
 }
