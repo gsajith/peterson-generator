@@ -102,7 +102,7 @@ function tweetLobster() {
           		replyId = status.id;
           		screenName = status.user.screen_name;
           		delayCount = delayCount + 1;
-          		if (status.user.screen_name != config.username && status.user.screen_name != "jordanbpeterson" && delayCount > 2) {
+          		if (status.user.screen_name != config.username && status.user.screen_name != "jordanbpeterson" && delayCount > 6) {
           			break;
           		}
           	}
