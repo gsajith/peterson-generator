@@ -120,17 +120,17 @@ function tweetLobster() {
           		in_reply_to_status_id: replyId,
           	}
 
-          	console.log(tweet);
+          	// console.log(tweet);
 
-          	// Twitter.post('statuses/update', tweet,function(err, data, response) {
-          	// 	if (response) {
-          	// 		console.log(data);
-          	// 	}
-           //      // if there was an error while tweeting
-           //      if (err) {
-           //      	console.log('Something went wrong while TWEETING... Duplication maybe...');
-           //      }
-           //  });
+          	Twitter.post('statuses/update', tweet,function(err, data, response) {
+          		if (response) {
+          			console.log(data);
+          		}
+                // if there was an error while tweeting
+                if (err) {
+                	console.log('Something went wrong while TWEETING... Duplication maybe...');
+                }
+            });
           }
         // if unable to Search a tweet
         else {
