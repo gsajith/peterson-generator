@@ -81,6 +81,8 @@ function tweetPeterson() {
 	Twitter.post('statuses/update', { status: generatedPhrase }, function(err, data, response) {
 		console.log(data)
 	});
+
+	setTimeout(tweetPeterson, getRandomHours(20, 30)); // Tweet at JBP once every 20-30 hours
 }
 
 // Tweet at a Peterson-replier
@@ -118,27 +120,30 @@ function tweetLobster() {
           		in_reply_to_status_id: replyId,
           	}
 
-          	Twitter.post('statuses/update', tweet,function(err, data, response) {
-          		if (response) {
-          			console.log(data);
-          		}
-                // if there was an error while tweeting
-                if (err) {
-                	console.log('Something went wrong while TWEETING... Duplication maybe...');
-                }
-            });
+          	console.log(tweet);
+
+          	// Twitter.post('statuses/update', tweet,function(err, data, response) {
+          	// 	if (response) {
+          	// 		console.log(data);
+          	// 	}
+           //      // if there was an error while tweeting
+           //      if (err) {
+           //      	console.log('Something went wrong while TWEETING... Duplication maybe...');
+           //      }
+           //  });
           }
         // if unable to Search a tweet
         else {
         	console.log('Something went wrong while SEARCHING...');
         }
     });
+	setTimeout(tweetLobster, getRandomHours(.08, .41)); // Tweet at a JBP follower once every 25-60 minutes
 }
 
 tweetLobster();
 setInterval(tweetGeneral, 3000000); // General tweet every 50 minutes
-setInterval(tweetLobster, getRandomHours(.08, .16)); // Tweet at a JBP follower once every 25-60 minutes
-setInterval(tweetPeterson, getRandomHours(20, 30)); // Tweet at JBP once every 20-30 hours
+setTimeout(tweetLobster, getRandomHours(.08, .41)); // Tweet at a JBP follower once every 25-60 minutes
+setTimeout(tweetPeterson, getRandomHours(20, 30)); // Tweet at JBP once every 20-30 hours
 
 var express = require('express');
 var app = express();
